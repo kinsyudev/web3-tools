@@ -4,7 +4,7 @@ import { Button } from "~/components/ui/button";
 
 export default function Header() {
   return (
-    <div className="grid w-full grid-cols-[1fr_auto] items-center">
+    <header className="grid w-full grid-cols-[1fr_auto] items-center">
       <h1 className="h-fit text-5xl font-extrabold tracking-tight text-black sm:text-[5rem]">
         kTools
       </h1>
@@ -20,6 +20,6 @@ export default function Header() {
           </Button>
         </Link>
       </div>
-    </div>
+    </header>
   );
 }

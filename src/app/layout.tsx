@@ -24,10 +24,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`font-sans ${inter.variable}`}>
-        <main className="z-10 grid min-h-screen grid-cols-1 grid-rows-[auto_1fr] items-center justify-start gap-4 px-4 py-8 text-black">
+        <div className="z-10 grid min-h-screen grid-cols-1 grid-rows-[auto_1fr] items-center justify-start gap-4 px-4 py-8 text-black">
           <Header />
           {children}
-        </main>
+        </div>
         <BackgroundBeams />
       </body>
     </html>
