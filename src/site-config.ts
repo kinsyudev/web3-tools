@@ -1,4 +1,5 @@
 export const siteConfig = {
+  url: "https://tools.kinsyu.dev",
   name: "Kinsyu Tools",
   shortName: "kTools",
   description:

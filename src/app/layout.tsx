@@ -5,6 +5,8 @@ import { type Metadata } from "next";
 import { BackgroundBeams } from "~/components/ui/background-beams";
 import Header from "~/components/header";
 import { Toaster } from "~/components/ui/toaster";
+import banner from "~/media/ktools.png";
+import { siteConfig } from "~/site-config";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -15,11 +17,34 @@ export const metadata = {
   title: "kTools",
   description: "A collection of web3 tools to make your life easier.",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
-  twitter: {
-    site: "https://tools.kinsyu.dev",
-    card: "summary",
-    
+  openGraph: {
+    url: siteConfig.url,
+    type: "website",
+    images: {
+      url: banner.src,
+      type: "image/png",
+      width: banner.width,
+      height: banner.height,
+      alt: siteConfig.shortName,
+    },
+    siteName: siteConfig.name,
+    title: siteConfig.shortName,
+    description: siteConfig.description,
   },
+  twitter: {
+    card: "summary_large_image",
+    creator: "@kinsyudev",
+    description: siteConfig.description,
+    title: siteConfig.shortName,
+    images: {
+      url: banner.src,
+      alt: siteConfig.shortName,
+      width: banner.width,
+      height: banner.height,
+    },
+    site: siteConfig.url,
+  },
+  creator: "@kinsyudev",
 } satisfies Metadata;
 
 export default function RootLayout({
