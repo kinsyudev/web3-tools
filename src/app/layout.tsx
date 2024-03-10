@@ -15,6 +15,11 @@ export const metadata = {
   title: "kTools",
   description: "A collection of web3 tools to make your life easier.",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
+  twitter: {
+    site: "https://tools.kinsyu.dev",
+    card: "summary",
+    
+  },
 } satisfies Metadata;
 
 export default function RootLayout({
